@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OrbitOps — Homepage Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090d;--panel:#0d1118;--line:#202936;--text:#f5f7fb;--muted:#8792a4;--cyan:#67e8f9;--violet:#9b8cff;--green:#72f2b5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 78% 8%,rgba(103,232,249,.13),transparent 27%),radial-gradient(circle at 12% 28%,rgba(155,140,255,.10),transparent 26%),var(--bg);color:var(--text);font-family:Manrope,sans-serif;overflow-x:hidden}.wrap{width:min(1220px,calc(100% - 40px));margin:auto}
+nav{height:74px;border-bottom:1px solid #171e27;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:800;letter-spacing:-.04em;display:flex;align-items:center;gap:10px}.mark{width:31px;height:31px;border:1px solid #3b4756;border-radius:9px;display:grid;place-items:center;position:relative;overflow:hidden}.mark:after{content:"";width:7px;height:7px;background:var(--cyan);border-radius:50%;box-shadow:10px 0 var(--violet),5px 9px var(--green);animation:orbit 2.6s linear infinite}@keyframes orbit{to{transform:rotate(360deg)}}.navlinks{display:flex;gap:28px;color:#8792a4;font-size:12px}.navlinks a:hover{color:white}.navbtn{border:1px solid #2d3948;background:#0d1219;padding:10px 15px;border-radius:10px;font-size:12px;font-weight:800}
+.hero{min-height:calc(100vh - 74px);display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center;padding:65px 0 75px}.kicker{display:inline-flex;gap:8px;align-items:center;border:1px solid #283340;background:rgba(255,255,255,.025);border-radius:999px;padding:8px 11px;color:#aab4c2;font:500 9px "DM Mono";letter-spacing:.13em;text-transform:uppercase}.live{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 16px var(--green);animation:pulse 1.5s infinite}@keyframes pulse{50%{opacity:.3;transform:scale(.65)}}
+h1{font-size:clamp(54px,6.4vw,86px);line-height:.96;letter-spacing:-.075em;margin:22px 0 24px}h1 span{background:linear-gradient(90deg,#fff,#8cebf5 52%,#aaa0ff);background-clip:text;color:transparent;background-size:180% 100%;animation:gradient 5s ease infinite}@keyframes gradient{50%{background-position:100% 0}}
+.hero p{color:var(--muted);font-size:16px;line-height:1.75;max-width:580px;margin-bottom:29px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid #2d3948;border-radius:11px;padding:14px 18px;font-size:12px;font-weight:800;transition:.25s}.btn:hover{transform:translateY(-3px);border-color:#566477;box-shadow:0 15px 35px rgba(0,0,0,.25)}.primary{background:#f4f7fb;color:#07090d}.secondary{background:#0d1219;color:#dfe6ee}.trust{display:flex;gap:18px;margin-top:32px;color:#637083;font:500 9px "DM Mono";text-transform:uppercase;letter-spacing:.1em}
+.product{border:1px solid #252e3b;background:linear-gradient(145deg,#111720,#090c11);border-radius:25px;padding:13px;box-shadow:0 45px 100px rgba(0,0,0,.52),0 0 75px rgba(103,232,249,.06);animation:float 5s ease-in-out infinite}@keyframes float{50%{transform:translateY(-9px)}}.window{border:1px solid #202936;border-radius:18px;overflow:hidden;background:#0b0f15}.bar{height:40px;border-bottom:1px solid #202936;display:flex;align-items:center;padding:0 12px;gap:6px}.bar i{width:7px;height:7px;border-radius:50%;background:#354151}.bar span{margin-left:auto;color:#667284;font:9px "DM Mono"}
+.dash{display:grid;grid-template-columns:130px 1fr;min-height:455px}.side{border-right:1px solid #202936;padding:15px 9px}.side b{font-size:9px;display:block;margin:0 7px 14px}.side div{color:#687486;font-size:8px;padding:9px 8px;border-radius:7px;margin:2px 0}.side .active{background:#171f2a;color:#fff}.main{padding:15px}.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.head b{font-size:11px}.ok{color:var(--green);font:8px "DM Mono";border:1px solid #244737;padding:5px 7px;border-radius:99px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.metric{background:#0f151d;border:1px solid #202936;border-radius:10px;padding:11px}.metric small{color:#687486;font:8px "DM Mono";display:block}.metric strong{font-size:18px;display:block;margin:7px 0 2px}.up{color:var(--green);font:8px "DM Mono"}
+.chart{margin-top:8px;border:1px solid #202936;background:#0f151d;border-radius:10px;padding:12px}.charthead{display:flex;justify-content:space-between;color:#7d8999;font-size:8px}.bars{height:120px;display:flex;align-items:flex-end;gap:7px;margin-top:12px}.bars i{flex:1;border-radius:5px 5px 1px 1px;background:linear-gradient(#67e8f9,#465b72);animation:bars 1.4s ease-in-out infinite alternate}.bars i:nth-child(2n){animation-delay:.18s}.bars i:nth-child(3n){animation-delay:.35s}@keyframes bars{to{transform:scaleY(.72);opacity:.55}}
+.code{margin-top:8px;border:1px solid #202936;border-radius:10px;background:#080b0f;padding:12px;font:9px/2 "DM Mono";color:#8b96a7;min-height:125px;position:relative;overflow:hidden}.code:after{content:"";position:absolute;left:0;right:0;top:-10%;height:25%;background:linear-gradient(transparent,rgba(103,232,249,.10),transparent);animation:scan 2.8s linear infinite}@keyframes scan{to{top:105%}}.cyan{color:var(--cyan)}.violet{color:#aaa0ff}.green{color:var(--green)}.cursor{display:inline-block;width:5px;height:10px;background:var(--cyan);vertical-align:-1px;animation:blink .8s infinite}@keyframes blink{50%{opacity:0}}
+.note{margin-top:20px;text-align:center;color:#586577;font:9px "DM Mono";letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:45px}.product{max-width:700px;margin:auto}.navlinks{display:none}}
+@media(max-width:560px){.wrap{width:calc(100% - 24px)}.hero{padding:45px 0}.dash{grid-template-columns:1fr}.side{display:none}.metrics{grid-template-columns:1fr}.trust{flex-wrap:wrap}.product{padding:7px}.hero p{font-size:14px}}
+
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+.eyebrow{color:#6f7b8d;font:500 10px "DM Mono";text-transform:uppercase;letter-spacing:.14em}
+.section-head h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.055em;max-width:680px;margin:9px 0 0}
+.section-head p{color:#778394;max-width:390px;font-size:13px;line-height:1.7;margin:0}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{border:1px solid #202936;background:rgba(13,17,24,.82);border-radius:18px;padding:25px;min-height:235px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#3a485a;box-shadow:0 22px 55px rgba(0,0,0,.24)}
+.icon{width:38px;height:38px;border-radius:10px;border:1px solid #2a3543;display:grid;place-items:center;margin-bottom:42px;color:var(--cyan);background:#0f151d}
+.card h3{font-size:17px;margin:0 0 9px}.card p{color:#788496;font-size:12px;line-height:1.7;margin:0}
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
+.bigcard{border:1px solid #202936;background:#0d1118;border-radius:22px;padding:30px}
+.bigcard h3{font-size:29px;letter-spacing:-.05em;margin:10px 0 13px}.bigcard p{color:#788496;font-size:13px;line-height:1.75}
+.terminal{font:400 10px "DM Mono";color:#8d9aaa;background:#080b0f;border:1px solid #1f2732;border-radius:15px;padding:18px;line-height:2;overflow:hidden;position:relative}
+.terminal:after{content:"";position:absolute;left:0;right:0;top:-20%;height:30%;background:linear-gradient(transparent,rgba(103,232,249,.08),transparent);animation:scan 3s linear infinite}
+@keyframes scan{to{top:110%}}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.price{border:1px solid #202936;background:#0d1118;border-radius:20px;padding:27px;transition:.3s}
+.price:hover{transform:translateY(-5px);border-color:#3a485a}.price.featured{border-color:#425464;box-shadow:0 0 45px rgba(103,232,249,.06)}
+.price h3{font-size:16px}.amount{font-size:36px;font-weight:800;letter-spacing:-.05em;margin:20px 0 4px}.amount small{font-size:11px;color:#707c8e;font-weight:500}
+.price p{color:#788496;font-size:11px;min-height:42px}.price ul{padding:0;margin:24px 0;list-style:none;color:#a0aaba;font-size:11px;line-height:2.3}
+.price li:before{content:"✓";color:var(--green);margin-right:9px}.price a{display:block;text-align:center;border:1px solid #2d3948;padding:12px;border-radius:10px;font-size:11px;font-weight:800}
+.cta{border:1px solid #26313e;border-radius:25px;padding:55px;background:radial-gradient(circle at 85% 20%,rgba(103,232,249,.13),transparent 30%),#0d1118;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.cta h2{font-size:42px;letter-spacing:-.06em;margin:8px 0}.cta p{color:#788496;font-size:13px}
+footer{padding:28px 0 45px;border-top:1px solid #171f29;color:#606c7d;font-size:10px;display:flex;justify-content:space-between;gap:20px}
+.demo{font:500 9px "DM Mono";color:#6f7c8d}
+@media(max-width:900px){.features,.pricing{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:15px}.split{grid-template-columns:1fr}}
+@media(max-width:560px){.features,.pricing{grid-template-columns:1fr}.cta{display:block;padding:35px 24px}.cta h2{font-size:32px}.cta .btn{display:inline-block;margin-top:18px}}
+
+</style>
+</head>
+<body id="top">
+<div class="wrap">
+<nav><a class="logo" href="#top"><span class="mark"></span>ORBITOPS</a><div class="navlinks"><a href="#platform">Platform</a><a href="#agents">AI Agents</a><a href="#pricing">Pricing</a></div><a class="navbtn" href="mailto:virexahartwell@gmail.com?subject=OrbitOps%20Demo%20Request">Request demo</a></nav>
+<section class="hero">
+<div>
+<div class="kicker"><span class="live"></span> AI operations infrastructure</div>
+<h1>Your business,<br><span>running in orbit.</span></h1>
+<p>OrbitOps brings AI agents, workflow automation, and operational intelligence into one command center — so teams can move from scattered tasks to controlled execution.</p>
+<div class="actions"><a class="btn primary" href="#platform">See the platform ↗</a><a class="btn secondary" href="#platform">Explore capabilities</a></div>
+<div class="trust"><span>Modern teams</span><span>•</span><span>AI-native workflows</span><span>•</span><span>Concept experience</span></div>
+</div>
+<div class="product">
+<div class="window">
+<div class="bar"><i></i><i></i><i></i><span>orbitops / command-center</span></div>
+<div class="dash">
+<aside class="side"><b>ORBITOPS</b><div class="active">Overview</div><div>Agents</div><div>Workflows</div><div>Signals</div><div>Integrations</div></aside>
+<div class="main">
+<div class="head"><b>Operations overview</b><span class="ok">● SYSTEM NOMINAL</span></div>
+<div class="metrics"><div class="metric"><small>Automations</small><strong>128</strong><span class="up">+18.4%</span></div><div class="metric"><small>Tasks resolved</small><strong>9.4k</strong><span class="up">+31.2%</span></div><div class="metric"><small>Hours saved</small><strong>642</strong><span class="up">+24.8%</span></div></div>
+<div class="chart"><div class="charthead"><span>Execution volume</span><span>LIVE</span></div><div class="bars"><i style="height:35%"></i><i style="height:50%"></i><i style="height:42%"></i><i style="height:63%"></i><i style="height:56%"></i><i style="height:78%"></i><i style="height:69%"></i><i style="height:88%"></i><i style="height:74%"></i><i style="height:96%"></i></div></div>
+<div class="code"><span class="violet">orbitops</span> <span class="cyan">agent.create</span>()<br>role: <span class="green">"Revenue Operations"</span><br>trigger: <span class="green">"new qualified lead"</span><br>tools: [crm, email, research]<br><span class="cyan">→</span> Agent initialized<br><span class="cyan">→</span> 4 actions queued<br><span class="cyan">→</span> Human approval required <span class="cursor"></span></div>
+</div></div></div></div>
+
+
+<section id="platform">
+  <div class="section-head">
+    <div><div class="eyebrow">01 / Platform</div><h2>One layer between your team and the busywork.</h2></div>
+    <p>AI agents, workflows, approvals and operational signals in one command center.</p>
+  </div>
+  <div class="features">
+    <article class="card"><div class="icon">✦</div><h3>AI agents</h3><p>Focused agents for research, support, operations and analysis — each with a defined role and execution boundary.</p></article>
+    <article class="card"><div class="icon">⌁</div><h3>Workflow engine</h3><p>Connect triggers, approvals, tools and actions into visual workflows that keep complex operations moving.</p></article>
+    <article class="card"><div class="icon">◌</div><h3>Operational signals</h3><p>Surface exceptions, bottlenecks and important changes without hunting through disconnected tools.</p></article>
+  </div>
+</section>
+
+<section id="agents">
+  <div class="split">
+    <div class="bigcard"><div class="eyebrow">02 / Agent layer</div><h3>Give every workflow a specialist.</h3><p>OrbitOps treats AI as an operational layer, not a chatbot bolted onto your product. Assign a role, define the tools, set approval rules, and let the agent execute.</p><a class="btn secondary" href="#agents">View agent architecture ↗</a></div>
+    <div class="terminal"><span class="violet">orbitops</span> <span class="cyan">agent.create</span>()<br><br>
+      role: <span class="green">"Revenue Operations"</span><br>
+      trigger: <span class="green">"new qualified lead"</span><br>
+      tools: [<span class="green">crm</span>, <span class="green">email</span>, <span class="green">research</span>]<br>
+      approval: <span class="green">"external-send"</span><br><br>
+      <span class="cyan">→</span> Agent initialized<br>
+      <span class="cyan">→</span> 4 actions queued<br>
+      <span class="cyan">→</span> Human approval required <span class="cursor"></span>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="section-head">
+    <div><div class="eyebrow">03 / Plans</div><h2>Start focused. Expand when the system proves itself.</h2></div>
+    <p>Concept pricing for portfolio presentation. Final commercial pricing would depend on implementation scope.</p>
+  </div>
+  <div class="pricing">
+    <article class="price"><h3>Signal</h3><div class="amount">$49 <small>/ month</small></div><p>For small teams testing their first automated workflows.</p><ul><li>3 AI agents</li><li>10 active workflows</li><li>Basic signals</li><li>Standard integrations</li></ul><a href="#demo">Explore plan</a></article>
+    <article class="price featured"><h3>Command</h3><div class="amount">$149 <small>/ month</small></div><p>For teams turning recurring operations into systems.</p><ul><li>15 AI agents</li><li>Unlimited workflows</li><li>Advanced approvals</li><li>Priority integrations</li></ul><a href="#demo">Explore plan</a></article>
+    <article class="price"><h3>Orbit</h3><div class="amount">Custom</div><p>For larger operational environments and tailored deployments.</p><ul><li>Custom agent architecture</li><li>Advanced controls</li><li>Dedicated environments</li><li>Implementation support</li></ul><a href="#demo">Talk to the team</a></article>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="cta">
+    <div><div class="eyebrow">04 / Concept experience</div><h2>Ready to put operations in orbit?</h2><p>This is a fictional SaaS concept created by Virexa & Hartwell for portfolio demonstration.</p></div>
+    <a class="btn primary" href="mailto:virexahartwell@gmail.com?subject=OrbitOps%20Project%20Enquiry&body=Hi%20Virexa%20%26%20Hartwell%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project.">Discuss a project ↗</a>
+  </div>
+</section>
+
+<footer><span>© 2026 OrbitOps — Concept UI by Virexa & Hartwell.</span><span class="demo">DEMO / NOT A REAL PRODUCT</span></footer>
+
+</section>
+</div>
+</body>
+</html>
